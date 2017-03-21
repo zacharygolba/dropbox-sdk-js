@@ -72,7 +72,7 @@ downloadRequest = function (path, args, auth, host, accessToken, selectUser) {
       .set('Dropbox-API-Arg', httpHeaderSafeJson(args))
       .on('request', function () {
         if (this.xhr) {
-          this.xhr.responseType = 'blob';
+          this.xhr.responseType = 'arraybuffer';
         }
       });
 
